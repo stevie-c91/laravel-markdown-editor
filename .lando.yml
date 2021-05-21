@@ -1,0 +1,25 @@
+name: laravel-markdown-editor
+recipe: laravel
+config:
+  webroot: public
+  php: '8.0'
+  composer_version: 2
+services:
+  appserver:
+    build:
+      - composer install
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+  node:
+    type: node:12
+    build:
+      - npm install && npm run dev
+  database:
+    portforward: 3307
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
