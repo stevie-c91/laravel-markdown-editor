@@ -1,5 +1,5 @@
 <x-layout>
-    <form method="POST" action="{{ route('posts.store') }}" class="flex flex-col space-y-6">
+    <form method="POST" action="{{ route('posts.store') }}" id="createPostForm" class="flex flex-col space-y-6">
         @csrf
 
         @if ($errors->any())
@@ -37,15 +37,8 @@
         </div>
 
         <div class="flex flex-col space-y-2">
-            <label for="content" class="text-gray-600 font-semibold">Content</label>
-            <textarea
-                name="content"
-                id="content"
-                placeholder="Content"
-                rows="6"
-                required
-                class="focus:ring-indigo-500 focus:border-indigo-500 p-2 border border-gray-300 rounded-md"
-            >{{ old('content') }}</textarea>
+            <label for="editor" class="text-gray-600 font-semibold">Content</label>
+            <div id="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></div>
         </div>
 
         <div class="flex flex-col space-y-2">
@@ -60,6 +53,8 @@
                 class="focus:ring-indigo-500 focus:border-indigo-500 p-2 border border-gray-300 rounded-md"
             >
         </div>
+
+        <input type="hidden" name="content" id="content">
 
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-40">
             Create post

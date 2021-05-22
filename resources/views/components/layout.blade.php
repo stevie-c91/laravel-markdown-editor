@@ -195,4 +195,9 @@
         </div>
     </div>
 </footer>
+
+@if (request()->routeIs('posts.create'))
+    <script src="{{ asset('js/app.js') }}"></script>
+@endif
+
 </body>

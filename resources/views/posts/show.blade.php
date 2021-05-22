@@ -7,7 +7,7 @@
             <p>{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y') }}</p>
         </div>
         <div class="prose lg:prose-xl max-w-none">
-            {{ $post->content }}
+            {!! \Illuminate\Support\Str::markdown($post->content) !!}
         </div>
     </article>
 </x-layout>
