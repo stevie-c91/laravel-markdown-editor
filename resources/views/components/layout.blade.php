@@ -168,7 +168,7 @@
 </div>
 
 <footer class="bg-gray-800 pt-10 sm:mt-10 pt-10">
-    <div class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 pb-6">
+    <div class="max-w-3xl mx-auto pb-6">
         <div class="max-w-4xl mx-auto text-gray-800 flex">
             <div class="w-1/2 sm:w-4/12 md:w-3/12">
                 <div class="text-xs uppercase text-gray-400 font-medium mb-6">

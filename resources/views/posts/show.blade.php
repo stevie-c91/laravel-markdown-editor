@@ -6,7 +6,7 @@
             <h2 class="pt-4 text-xl font-bold mb-5">{{ $post->subtitle }}</h2>
             <p>{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y') }}</p>
         </div>
-        <div class="prose lg:prose-xl max-w-none">
+        <div class="prose lg:prose-l max-w-none">
             {!! \Illuminate\Support\Str::markdown($post->content) !!}
         </div>
     </article>
