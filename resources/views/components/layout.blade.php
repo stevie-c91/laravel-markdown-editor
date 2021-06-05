@@ -196,7 +196,7 @@
     </div>
 </footer>
 
-@if (request()->routeIs('posts.create'))
+@if (request()->routeIs('posts.create') || request()->routeIs('posts.edit'))
     <script src="{{ asset('js/app.js') }}"></script>
 @endif
 
